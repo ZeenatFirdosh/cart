@@ -8,19 +8,19 @@ const Navbar = () => {
     
   return (
     <div>
-        {/* <button type="button" class="btn btn-primary" onClick={() => setShowCart(true)}>
-        <AiOutlineShopping /> <span class="badge text-bg-secondary">{totalQuantities}</span>
+        {/* <button type="button" className="btn btn-primary" onClick={() => setShowCart(true)}>
+        <AiOutlineShopping /> <span className="badge text-bg-secondary">{totalQuantities}</span>
         </button> */}
 
-        <button class="btn btn-primary" type="button" onClick={() => setShowCart(true)} data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><AiOutlineShopping /> <span class="badge text-bg-secondary">{totalQuantities}</span></button>
+        <button className="btn btn-primary" type="button" onClick={() => setShowCart(true)} data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><AiOutlineShopping /> <span className="badge text-bg-secondary">{totalQuantities}</span></button>
 
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasRightLabel">Cart</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div className="offcanvas-header">
+            <h5 className="offcanvas-title" id="offcanvasRightLabel">Cart</h5>
+            <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body">
-        <table class="table table-hover">
+        <div className="offcanvas-body">
+        <table className="table table-hover">
         <thead>
           <tr>
             
@@ -29,7 +29,7 @@ const Navbar = () => {
             <th scope="col">----</th>
           </tr>
         </thead>
-        <tbody class="table-group-divider">
+        <tbody className="table-group-divider">
             {/* console.console.log(products);
             {[products]}; */}
           {cartItems.map((productc) => {

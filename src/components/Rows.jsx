@@ -8,7 +8,7 @@ const Rows = ({name,price,productc}) => {
           <tr>            
             <td>{name}</td>
             <td>{price} </td>
-            <td><button type="button" class="btn btn-dark" onClick={()=>{deleteUser(productc._id)}}>Delete</button></td>
+            <td><button type="button" className="btn btn-dark" onClick={()=>{deleteUser(productc._id)}}>Delete</button></td>
           </tr>
     
   )

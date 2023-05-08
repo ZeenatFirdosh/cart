@@ -45,30 +45,50 @@ export const StateContext = ({ children }) => {
     ];
     const [products, setProducts] = useState(usersInitial);
 
-    const onAdd = (product) => {     
-      // setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + 1);
-      // eslint-disable-next-line no-lone-blocks
-      {console.log(cartItems)};
-      {console.log(product._id)};
-      for (let index = 0; index < cartItems.length; index++) {
-        const element = cartItems[index];
-        if (element._id == product._id) {
-          {console.log(element._id)}
-          {console.log(product._id)}
-          break; 
-        }
-        else{
-          setCartItems([...cartItems, { ...product }]);
-          setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + 1);
-        }
-      }
-      if(cartItems.length === 0){
-        {console.log(cartItems.length)};
+    const onAdd = (product) => {  
+      const checkProductInCart = cartItems.find((item) => item._id === product._id);
+      
+      setTotalPrice((prevTotalPrice) => prevTotalPrice + product.price * 1);
+      
+
+      if(checkProductInCart) {
+        // const updatedCartItems = cartItems.map((cartProduct) => {
+        //   if(cartProduct._id === product._id) return {
+        //     ...cartProduct,
+        //     quantity: cartProduct.quantity + 1
+        //   }
+        // })
+  
+        // setCartItems(updatedCartItems);
+      } else {
+        // product.quantity = 1;
+        
         setCartItems([...cartItems, { ...product }]);
         setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + 1);
       }
-      // setCartItems([...cartItems, { ...product }]);
-      {console.log(cartItems)}
+      // // setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + 1);
+      // // eslint-disable-next-line no-lone-blocks
+      // {console.log(cartItems)};
+      // {console.log(product._id)};
+      // for (let index = 0; index < cartItems.length; index++) {
+      //   const element = cartItems[index];
+      //   if (element._id == product._id) {
+      //     {console.log(element._id)};
+      //     {console.log(product._id)}
+      //     break; 
+      //   }
+      //   else{
+      //     setCartItems([...cartItems, { ...product }]);
+      //     setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + 1);
+      //   }
+      // }
+      // if(cartItems.length === 0){
+      //   {console.log(cartItems.length)};
+      //   setCartItems([...cartItems, { ...product }]);
+      //   setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + 1);
+      // }
+      // // setCartItems([...cartItems, { ...product }]);
+      // {console.log(cartItems)}
     }
 
     // Delete a Note********************************************************************

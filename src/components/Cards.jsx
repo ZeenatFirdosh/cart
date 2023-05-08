@@ -8,12 +8,12 @@ const Cards = ({name,price,product}) => {
 
   return (
    
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-            <h5 class="card-title">{name}</h5>
-            <p class="card-text">price : ${price}</p>
-            <a href="#" class="btn btn-primary" onClick={() => onAdd(product)} >Add to cart</a>
+    <div className="col-sm-6">
+      <div className="card">
+        <div className="card-body">
+            <h5 className="card-title">{name}</h5>
+            <p className="card-text">price : ${price}</p>
+            <a href="#" className="btn btn-primary" onClick={() => onAdd(product)} >Add to cart</a>
         </div>
       </div>
     </div>
