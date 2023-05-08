@@ -12,7 +12,7 @@ const Navbar = () => {
         <AiOutlineShopping /> <span className="badge text-bg-secondary">{totalQuantities}</span>
         </button> */}
 
-        <button className="btn btn-primary position-relative top-0 end-0 mt-3" type="button" onClick={() => setShowCart(true)} data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><AiOutlineShopping /> <span className="position-absolute top-0 start-100 translate-middle badge text-bg-secondary bg-danger">{totalQuantities}</span></button>
+        <button className="btn btn-primary btn-lg position-relative top-0 end-0 mt-3 " type="button" onClick={() => setShowCart(true)} data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><AiOutlineShopping /> <span className="position-absolute top-0 start-100 translate-middle rounded-pill badge text-bg-secondary bg-danger">{totalQuantities}</span></button>
 
         <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div className="offcanvas-header">

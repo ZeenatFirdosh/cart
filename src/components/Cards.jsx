@@ -13,7 +13,7 @@ const Cards = ({name,price,product}) => {
         <div className="card-body">
             <h5 className="card-title">{name}</h5>
             <p className="card-text">price : ${price}</p>
-            <a href="#" className="btn btn-primary" onClick={() => onAdd(product)} >Add to cart</a>
+            <a href="#" className="btn btn-success" onClick={() => onAdd(product)} >Add to cart</a>
         </div>
       </div>
     </div>
