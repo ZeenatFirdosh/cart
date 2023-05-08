@@ -8,7 +8,7 @@ const Cards = ({name,price,product}) => {
 
   return (
    
-    <div className="col-sm-6">
+    <div className="col-sm-6 mt-3">
       <div className="card">
         <div className="card-body">
             <h5 className="card-title">{name}</h5>
